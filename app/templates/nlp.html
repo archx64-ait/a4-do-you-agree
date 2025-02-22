@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container mt-5">
+        <div class="text-center mb-4">
+            <h1 class="display-4">A4: Do you AGREE?</h1>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <a class="btn btn-primary" href="{% url 'index' %}">Back</a>
+                    </div>
+                </form>
+                {% comment %} <pre>{{ result|default:"No result found" }}</pre> {% endcomment %}
+                {% if result %}
+                    <div class="mt-5">
+                        <h4 class="text-success">Generated Result:</h4>
+                        <p class="lead">{{ result }}</p>
+                    </div>
+                {% else %}
+                    <div class="mt-5">
+                        <p class="text-muted">Submit a prompt to see the result here.</p>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

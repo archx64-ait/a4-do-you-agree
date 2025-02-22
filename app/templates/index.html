@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+
+<div class="container text-center mt-5">
+    <h1 class="mb-4">A4: Do you AGREE?</h1>
+    <a href="{% url 'nlp:skipgram' %}" class="btn btn-primary btn-lg mt-3">Get Started</a>
+</div>
+
+<footer class="footer mt-5 bg-light text-center py-3">
+    <span>© 2025 Kaung Sithu - All Rights Reserved</span>
+</footer>
+{% endblock %}

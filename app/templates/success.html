@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="container" style="max-width:1200px">
+        <div class="px-5 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h3 class="display-4">10 most similar words</h3>
+            {{result}}
+            <br>
+            <br>
+            <br>
+            <a class="btn btn-primary" href="{% url 'nlp:skipgram' %}">Back</a>
+        </div>
+    </div>
+{% endblock %}
