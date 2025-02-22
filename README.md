@@ -85,3 +85,5 @@ python manage.py runserver
 The application will be running at <http://localhost:8000/>. Click on Get Started to navigate to prediction page.
 
 <img src='code/figures/webapp.PNG' alt='web application'>
+
+Note: model files are not included in GitHub repository as they are too large to upload.
